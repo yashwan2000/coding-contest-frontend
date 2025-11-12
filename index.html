@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coding Contest Submission & Timer System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>💻 Coding Contest Submission & Timer System</h1>
+
+  <section class="timer">
+    <h2>⏳ Contest Timer</h2>
+    <div id="countdown">05:00</div>
+    <button onclick="startTimer()">Start Contest</button>
+  </section>
+
+  <section class="code-section">
+    <h2>🧑‍💻 Code Editor</h2>
+    <textarea id="codeArea" placeholder="Write your code here..."></textarea><br>
+    <button onclick="submitCode()">Submit Code</button>
+  </section>
+
+  <section class="output">
+    <h2>📤 Output</h2>
+    <pre id="output"></pre>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
