@@ -1,42 +1,18 @@
-let timer;
-let timeLeft = 300; // 5 minutes
-
-function startTimer() {
-  clearInterval(timer);
-  timeLeft = 300;
-  timer = setInterval(() => {
-    let minutes = Math.floor(timeLeft / 60);
-    let seconds = timeLeft % 60;
-    document.getElementById("countdown").innerText =
-      `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-    if (timeLeft <= 0) {
-      clearInterval(timer);
-      document.getElementById("countdown").innerText = "⏰ Time Up!";
-      alert("Contest Time Over!");
-    }
-    timeLeft--;
-  }, 1000);
+function showTip() {
+    document.getElementById("tip").innerHTML =
+        "Always plan your travel budget and book tickets early!";
 }
 
-async function submitCode() {
-  const code = document.getElementById("codeArea").value;
-  if (!code.trim()) {
-    alert("Please write some code before submitting!");
-    return;
-  }
+function validateForm() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let destination = document.getElementById("destination").value;
 
-  document.getElementById("output").innerText = "⏳ Submitting code...";
+    if (name === "" || email === "" || destination === "") {
+        alert("Please fill all the details");
+        return false;
+    }
 
-  try {
-    const response = await fetch("http://localhost:8080/submit", {
-      method: "POST",
-      headers: { "Content-Type": "text/plain" },
-      body: code
-    });
-
-    const result = await response.text();
-    document.getElementById("output").innerText = result;
-  } catch (error) {
-    document.getElementById("output").innerText = "❌ Error connecting to server!";
-  }
+    alert("Your travel booking request has been submitted!");
+    return true;
 }

@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coding Contest Submission & Timer System</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Travel Planner - Home</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>💻 Coding Contest Submission & Timer System</h1>
 
-  <section class="timer">
-    <h2>⏳ Contest Timer</h2>
-    <div id="countdown">05:00</div>
-    <button onclick="startTimer()">Start Contest</button>
-  </section>
+<header>
+    <h1>Travel Planner</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
 
-  <section class="code-section">
-    <h2>🧑‍💻 Code Editor</h2>
-    <textarea id="codeArea" placeholder="Write your code here..."></textarea><br>
-    <button onclick="submitCode()">Submit Code</button>
-  </section>
+<section class="content">
+    <h2>Plan Your Perfect Trip</h2>
+    <p>Welcome to Travel Planner. We help you plan amazing trips easily.
+        
+    </p>
 
-  <section class="output">
-    <h2>📤 Output</h2>
-    <pre id="output"></pre>
-  </section>
+    <button onclick="showTip()">Travel Tip</button>
+    <p id="tip"></p>
+</section>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
